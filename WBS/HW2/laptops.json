@@ -1,0 +1,4 @@
+[{"company": "Acer", "product": "Swift 1", "price":"399$", "storage":"64GB" }, 
+{"company": "Asus", "product": "Vivobook 16", "price":"799$", "storage":"1 TB" },
+{"company": "Dell", "product": "Inspiron 15", "price":"599$", "storage":"512GB" },
+{"company": "HP", "product": "Pavilion 14", "price":"499$", "storage":"256GB" }]
