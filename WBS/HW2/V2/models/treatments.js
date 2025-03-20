@@ -1,20 +1,20 @@
 const mongoose = require("mongoose");
 
-const treatementSchema = mongoose.Schema({
-    "service": String,
-    "price": Number,
-    "duration": String
+const treatmentSchema = mongoose.Schema({
+    service: String,
+    price: Number,
+    duration: String
 })
 
-const treatmentModel = mongoose.model("beautyTreatment", treatementSchema, "beautyTreatments");
+const treatmentModel = mongoose.model("beautyTreatment", treatmentSchema, "beautyTreatments");
 
 const get = async () => {
     return await treatmentModel.find()
 }
 
 const create = async (data) => {
-    const newTreatement = new treatmentModel(data);
-    return await newTreatement.save()
+    const newTreatment = new treatmentModel(data);
+    return await newTreatment.save()
 }
 
 const update = async (id, data) => {
