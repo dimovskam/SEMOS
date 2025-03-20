@@ -1,8 +1,8 @@
 const {read, write} = require("../read-write");
 
-const getBeauty = async (req, res) => {
+const getTreatment = async (req, res) => {
     try{
-        const beauty = await read("beauty_salon.json");
+        const beauty = await read("beautyTreatments.json");
         return res.status(200).send(beauty)
 
     }catch(err) {
@@ -11,12 +11,12 @@ const getBeauty = async (req, res) => {
     }
 }
 
-const createBeauty = async (req,res) => {
+const createTreatment = async (req,res) => {
     try {
-        const beauty = await read ("beauty_salon.json");
+        const beauty = await read ("beautyTreatments.json");
         const newProduct = req.body
         beauty.push(newProduct)
-        await write ("beauty_salon.json", beauty)
+        await write ("beautyTreatments.json", beauty)
         return res.status(200).send("Product added successfully!")
 
     }catch(err) {
@@ -25,9 +25,9 @@ const createBeauty = async (req,res) => {
     }
 }
 
-const updateProduct = async (req,res) => {
+const updateTreatment = async (req,res) => {
     try {
-        let beauty = await read ("beauty_salon.json");
+        let beauty = await read ("beautyTreatments.json");
         const productId = Number (req.params.id);
         const newProduct = req.body
 
@@ -40,7 +40,7 @@ const updateProduct = async (req,res) => {
             }
             return product;
         })
-        await write ("beauty_salon.json", beauty)
+        await write ("beautyTreatments.json", beauty)
         return res.status(200).send("Product updated successfully!")
 
     }catch(err) {
@@ -49,13 +49,13 @@ const updateProduct = async (req,res) => {
     }
 }
 
-const deleteProduct = async (req, res) => {
+const deleteTreatment = async (req, res) => {
     try {
         const productId = Number (req.params.id);
-        let beauty = await read ("beauty_salon.json");
+        let beauty = await read ("beautyTreatments.json");
         beauty = beauty.filter((_, index) => index !==  productId);
 
-        await write ("beauty_salon.json", beauty)
+        await write ("beautyTreatments.json", beauty)
         return res.status(200).send("Product deleted successfully!")
     }catch(err) {
         console.log(err);
@@ -64,8 +64,8 @@ const deleteProduct = async (req, res) => {
 }
 
 module.exports = {
-    getBeauty,
-    createBeauty, 
-    updateProduct,
-    deleteProduct
+    getTreatment,
+    createTreatment,
+    updateTreatment,
+    deleteTreatment
 }
