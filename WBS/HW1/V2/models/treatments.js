@@ -4,9 +4,9 @@ const treatmentSchema = mongoose.Schema({
     service: String,
     price: Number,
     duration: String
-})
+});
 
-const treatmentModel = mongoose.model("beautyTreatment", treatmentSchema, "beautyTreatments");
+const treatmentModel = mongoose.model("beautytreatment", treatmentSchema, "beautyTreatments");
 
 const get = async () => {
     return await treatmentModel.find()

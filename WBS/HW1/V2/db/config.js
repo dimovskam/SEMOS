@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-const URI =
-
+const URI = ""
 async function connect() {
     try{
     await mongoose.connect(URI);
