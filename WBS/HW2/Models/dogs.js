@@ -2,9 +2,9 @@ const mongoose = require ("mongoose");
 
 const dogSchema = mongoose.Schema({
     breed: String,
-    origin: String, 
-    Life_expectancy:String
-})
+    origin: String,
+    life_expectancy: String
+});
 
 const dogsModel = mongoose.model("Dog", dogSchema, "dogs");
 

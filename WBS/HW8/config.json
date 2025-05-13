@@ -1,0 +1,9 @@
+{
+    "weather" : {
+        "port" : 8000,
+        "api_key": "f5e3762d85357041c6f4bcced1c291b8",
+        "cache_expiery": 600,
+        "API_URL":"https://api.openweathermap.org/data/2.5",
+        "RICK_AND_MORTY_URL": "https://rickandmortyapi.com/api"
+    }
+}

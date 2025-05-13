@@ -7,9 +7,9 @@ const dogCreate = {
 }
 
 const dogUpdate = {
-    breed : String, 
-    origin: String,
-    life_expextancy: String
+    breed : "String", 
+    origin: "String",
+    life_expectancy: "String"
 }
 
 const validateDog = async (data, Schema) => {
