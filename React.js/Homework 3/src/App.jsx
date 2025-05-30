@@ -1,5 +1,5 @@
 import React from "react"
-import { Movies } from "./components/movies"
+import { Movies } from "./components/Movies"
 
   let movie1 = {
     name:"The Shawshank Redemption", 
@@ -19,6 +19,16 @@ import { Movies } from "./components/movies"
     image:"https://resizing.flixster.com/kNAalgVTTW4PiJNLyUlQrRoXbTA=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p15829_v_h9_aa.jpg",
     director:"Robert Zemeckis"}
 
+    let movie3 = {
+      name: "The Dark Knight",
+      date: "24/07/2008",
+      genre: "Action, Crime, Drama, Thriller",
+      plot: "Set within a year after the events of Batman Begins (2005), Batman, Lieutenant James Gordon, and new District Attorney Harvey Dent successfully begin to round up the criminals that plague Gotham City, until a mysterious and sadistic criminal mastermind known only as The Joker appears in Gotham, creating a new wave of chaos. Batman's struggle against The Joker becomes deeply personal, forcing him to confront everything he believes and improve his technology to stop him. A love triangle develops between Bruce Wayne, Dent, and Rachel Dawes.",
+      imdbLink: "https://www.imdb.com/title/tt0468569/?ref_=chttp_i_3",
+      image: "https://m.media-amazon.com/images/I/9131BgavE-L._AC_UF894,1000_QL80_.jpg",
+      director: "Christopher Nolan"
+    }
+
 export function App() {
 
   return(
@@ -26,6 +36,8 @@ export function App() {
       <Movies 
       movie1={movie1}
       movie2={movie2}
+      movie3={movie3}
+      
       />
     </div>
   )

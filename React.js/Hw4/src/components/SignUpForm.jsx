@@ -7,7 +7,9 @@ export const SugnUpForm = () => {
     const [email,setEmail] = useState("")
     const [username,setUsername] = useState("")
     const [password,setPassword] = useState("")
+    const [age,setAge] = useState(0)
     const [tableValue,setTableValue] = useState()
+    
 
   
     useEffect(()=>{
@@ -19,9 +21,7 @@ export const SugnUpForm = () => {
     },[ime, prezime, email, username, password])
   
   
-    const ShowTable = () => {
-        setTableValue(!tableValue)
-    }
+    
   
     return(
         <div id="sign-up">
@@ -68,7 +68,15 @@ export const SugnUpForm = () => {
             />
             <br />
             <br />
-            <button onClick={ShowTable}>Prikazi podatoci</button>
+            <input 
+            type="number"
+            placeholder="Enter Age"
+            value={age}
+            onChange={(e) => {setAge(e.target.value)}}
+            />
+            <br />
+            <br />
+            <button onClick={()=>{setTableValue(!tableValue)}}>{tableValue ? "Hide Table" : "Show Table"}</button>
             <br />
             <br />
             {tableValue && (
@@ -80,6 +88,7 @@ export const SugnUpForm = () => {
                         <th>Email</th>
                         <th>Username</th>
                         <th>Password</th>
+                        <th>Age</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,6 +98,7 @@ export const SugnUpForm = () => {
                         <td>{email}</td>
                         <td>{username}</td>
                         <td>{password}</td>
+                        <td>{age}</td>
                     </tr>
                 </tbody>
             </table>
